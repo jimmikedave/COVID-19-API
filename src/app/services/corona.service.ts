@@ -9,7 +9,8 @@ export class CoronaService {
 
   constructor(private http:HttpClient) { }
 
-
+  // **THIS IS WHERE YOU MAKE THE API CALLS**
+  
   // Retrieves the list of countries from the API
   getCountries():Observable<any>{
     const url = "https://api.covid19api.com/countries"

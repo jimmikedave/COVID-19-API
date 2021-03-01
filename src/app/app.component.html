@@ -1,11 +1,14 @@
 <div>
   <h1>CoronaVirus Live Tracker with Angular</h1>
   <label>Country</label>
-  <select>
-    <option>All</option>>
+  <!-- on change event -->
+  <select (change)="getCountry($event)">
+    <!-- slug = name in api object -->
+    <!-- ngFor loops through countries array declared in component, country selected is displayed -->
+    <option *ngFor="let country of countries" value={{country.Slug}}>{{country.Country}}</option>>
   </select>
-  <br/>
-  <button>Get CoronaVirus data</button>
+  <br><br>
+  <button (click)="getCoronaData()">Get CoronaVirus data</button>
   <h1>Total Confirmed Cases:</h1>
   <h1>Total Recovered Cases:</h1>
   <h1>Total Deaths Cases:</h1>
